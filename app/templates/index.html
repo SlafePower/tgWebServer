@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<H1>New messages</H1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>Message</th>
+        <th>Date</th>
+    </tr>
+    {% for msg in msgs %}
+    <tr>
+      <td>{{ msg.id }}</td>
+      <td>{{ msg.text }}</td>
+      <td>{{ msg.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<H1>Archive messages</H1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>Message</th>
+        <th>Date</th>
+    </tr>
+    {% for ms in arch %}
+    <tr>
+      <td>{{ ms.id }}</td>
+      <td>{{ ms.text }}</td>
+      <td>{{ ms.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
